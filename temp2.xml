@@ -1,0 +1,23 @@
+<Envelope>
+	<Header>
+		<MessageID />
+		<ReplyTo>
+			<Address />
+		</ReplyTo>
+		<FaultTo>
+			<Address />
+		</FaultTo>
+	</Header>
+	<Body>
+		<InitiateProcessPrePaymentResponse>
+			<Response>
+				<MTI />
+				<RESPONSE_CODE_39 />
+				<ADDITIONAL_RESPONSE_DATA_48 />
+				<REQUESTID_121 />
+				<UTRN_125 />
+				<RETRIEVAL_REFERENCE_NUMBER_37 />
+			</Response>
+		</InitiateProcessPrePaymentResponse>
+	</Body>
+</Envelope>

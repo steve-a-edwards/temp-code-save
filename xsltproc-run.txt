@@ -1,0 +1,3 @@
+cd /Users/steve/Applications/eclipse/workspace-datapower-git/temp-code-save
+
+xsltproc xml-structure-debug.xsl sample.xml

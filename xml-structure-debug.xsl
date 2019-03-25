@@ -13,13 +13,15 @@
 		<xsl:call-template name="elements-above-given">
 			<xsl:with-param name="given-element-name" select="'RETRIEVAL_REFERENCE_NUMBER_37'"/>
 		</xsl:call-template>
+		
+		<xsl:call-template name="elements-names-structure"/>
+		
+		
 	</xsl:template>
-	
+<!-- ========================== ELEMENTS ABOVE GIVEN START ========================== -->
 	<xsl:template name="elements-above-given">
 		<xsl:param name="given-element-name"/>
-<!-- 
-	<xsl:variable name="searched-element-name" select="'RETRIEVAL_REFERENCE_NUMBER_37'"/>
- -->	
+
 	<xsl:variable name="found-nodes" select="//*[local-name() = $given-element-name]"/>
 		
 	<xsl:variable name="list-of-parent-nodes">
@@ -36,6 +38,27 @@
 			<xsl:apply-templates select=".." mode="found"/>
 		</xsl:if>
 	</xsl:template>
+<!-- ========================== ELEMENTS ABOVE GIVEN END ========================== -->
 
+<!-- ======================== ELEMENTS NAME STRUCTURE START ======================== -->
+
+	<xsl:template name="elements-names-structure">
+		<xsl:variable name="structure-with-whitepace">
+		<xsl:apply-templates select="/*" mode="elements-names-structure"/>
+		</xsl:variable>
+<xsl:value-of select="translate($structure-with-whitepace, ' &#9;&#10;', '')"/>
+	</xsl:template>
+	
+	<xsl:template match="*" mode="elements-names-structure">
+		<xsl:choose>
+		<xsl:when test="(count(*) = 0)">
+		&lt;<xsl:value-of select="local-name(.)"/>/&gt;
+		</xsl:when>
+		<xsl:otherwise>
+			&lt;<xsl:value-of select="local-name(.)"/>&gt;<xsl:apply-templates select="*" mode="elements-names-structure"/>&lt;/<xsl:value-of select="local-name(.)"/>&gt;
+		</xsl:otherwise>
+	</xsl:choose>
+	</xsl:template>
+<!-- ======================== ELEMENTS NAME STRUCTURE END ========================= -->
 	
 </xsl:stylesheet>
