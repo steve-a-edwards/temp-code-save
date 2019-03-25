@@ -1,0 +1,46 @@
+<env:Envelope
+	xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:wsa="http://www.w3.org/2005/08/addressing">
+	<env:Header>
+		<wsa:MessageID>
+			urn:F2DEBC60402211E9AF2B1F671B84E3B3
+		</wsa:MessageID>
+		<wsa:ReplyTo>
+			<wsa:Address>
+				http://www.w3.org/2005/08/addressing/anonymous
+			</wsa:Address>
+		</wsa:ReplyTo>
+		<wsa:FaultTo>
+			<wsa:Address>
+				http://www.w3.org/2005/08/addressing/anonymous
+			</wsa:Address>
+		</wsa:FaultTo>
+	</env:Header>
+	<env:Body>
+		<InitiateProcessPrePaymentResponse
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+			xmlns:inp1="http://xmlns.oracle.com/ISO/ProcessPrePayment"
+			xmlns="http://xmlns.oracle.com/ISO/ProcessPrePayment">
+			<inp1:Response>
+				<inp1:MTI>
+					0210
+				</inp1:MTI>
+				<inp1:RESPONSE_CODE_39>
+					00
+				</inp1:RESPONSE_CODE_39>
+				<inp1:ADDITIONAL_RESPONSE_DATA_48>
+					Successful Transaction. UTRN - 74301960866828643550
+				</inp1:ADDITIONAL_RESPONSE_DATA_48>
+				<inp1:REQUESTID_121>
+					166462454
+				</inp1:REQUESTID_121>
+				<inp1:UTRN_125>
+					74301960866828643550
+				</inp1:UTRN_125>
+				<inp1:RETRIEVAL_REFERENCE_NUMBER_37>
+					065862632
+				</inp1:RETRIEVAL_REFERENCE_NUMBER_37>
+			</inp1:Response>
+		</InitiateProcessPrePaymentResponse>
+	</env:Body>
+</env:Envelope>

@@ -1,0 +1,18 @@
+
+<env:Envelope
+	xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+	<env:Body>
+		<InitiateProcessPrePaymentResponse
+			xmlns="http://xmlns.oracle.com/ISO/ProcessPrePayment"
+			xmlns:inp1="http://xmlns.oracle.com/ISO/ProcessPrePayment">
+			<inp1:Response>
+				<inp1:RETRIEVAL_REFERENCE_NUMBER_37>
+					123456789
+				</inp1:RETRIEVAL_REFERENCE_NUMBER_37>
+				<inp1:UTRN_125>
+					12345678901234567890
+				</inp1:UTRN_125>
+			</inp1:Response>
+		</InitiateProcessPrePaymentResponse>
+	</env:Body>
+</env:Envelope>

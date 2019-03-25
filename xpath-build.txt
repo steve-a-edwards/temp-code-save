@@ -1,0 +1,6 @@
+/*[local-name()  = 'Envelope']/*[local-name()  = 'Body']/*[local-name()  = 'InitiateProcessPrePaymentResponse']/*[local-name()  = 'Response']/*[local-name()  = 'RETRIEVAL_REFERENCE_NUMBER_37']/text()
+
+/*[local-name()  = 'Envelope']/*[local-name()  = 'Body']/*[local-name()  = 'InitiateProcessPrePaymentResponse']/*[local-name()  = 'Response']/*[local-name()  = 'UTRN_125']/text()
+
+
+Above worked OK for both my sample and OLU's sample.xml
